@@ -940,7 +940,7 @@ a {
 .timeline-head {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
   gap: var(--space-4);
   flex-wrap: wrap;
 }

@@ -195,12 +195,14 @@
     return (
       '<div class="timeline-item reveal">' +
       '<div class="timeline-head">' +
+      '<div class="timeline-main">' +
       '<span class="timeline-role">' + esc(role) + "</span>" +
+      '<div class="timeline-org">' + esc(org) + "</div>" +
+      "</div>" +
       '<span class="timeline-side"><span class="timeline-period">' + esc(period) + "</span>" +
       (location ? '<span class="timeline-loc">' + esc(location) + "</span>" : "") +
       "</span>" +
       "</div>" +
-      '<div class="timeline-org">' + esc(org) + "</div>" +
       (desc ? '<p class="timeline-desc">' + esc(desc) + "</p>" : "") +
       "</div>"
     );
