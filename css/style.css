@@ -1043,6 +1043,12 @@ a {
     gap: var(--space-1);
   }
 
+  /* flex-basis was sized for the horizontal layout; in column
+     direction it would become a 5.2rem-tall date box */
+  .news-date {
+    flex-basis: auto;
+  }
+
   .timeline-item {
     padding-left: var(--space-4);
   }

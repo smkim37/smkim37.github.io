@@ -264,7 +264,7 @@ const SITE = {
   /* ---------- Fellowships & Awards ---------- */
   fellowships: [
     {
-      name: { en: "NRF Graduate Research Encouragement Grant", ko: "박사과정생 연구장려금" },
+      name: { en: "NRF Graduate Research Encouragement Grant", ko: "석사과정생 연구장려금" },
       org: { en: "National Research Foundation of Korea", ko: "한국연구재단" },
       year: { en: "Sep 2025", ko: "2025.09" },
       note: null,
@@ -349,10 +349,10 @@ const SITE = {
       year: { en: "Jan 2023", ko: "2023.01" },
     },
     {
-      name: { en: "President’s List Award, University-wide Undergraduate Honor", ko: "President’s List, 전교 우수 학부생" },
+      name: { en: "President’s List Award, University-wide Undergraduate Honor", ko: "President’s List, 교내 우수 학부생" },
       org: { en: "Sungkyunkwan University", ko: "성균관대학교" },
       year: { en: "Dec 2022", ko: "2022.12" },
-      note: { en: "Selected as one of the top 20 students university-wide", ko: "전교 20명 선발" },
+      note: { en: "Selected as one of the top 20 students university-wide", ko: "교내 20명 선발" },
     },
     {
       name: { en: "Excellence Award, Web Development Competition Using AI", ko: "우수상, AI 활용 웹 개발 경진대회" },
@@ -458,7 +458,7 @@ const SITE = {
       period: { en: "Nov 2021 – Nov 2022", ko: "2021.11 – 2022.11" },
     },
     {
-      role: { en: "President", ko: "대표" },
+      role: { en: "President", ko: "대표 학생" },
       org: { en: "School of Global Convergence Ambassadors “Alimi”, Sungkyunkwan University", ko: "글로벌융합학부 홍보대사 “알리미”, 성균관대학교" },
       period: { en: "Sep 2021 – Aug 2022", ko: "2021.09 – 2022.08" },
     },
