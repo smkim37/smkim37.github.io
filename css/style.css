@@ -325,8 +325,10 @@ a {
     position: fixed;
     z-index: 30;
     top: calc(var(--header-h) + var(--space-12));
-    left: calc(50% + 27.125rem); /* just right of the content column */
-    width: 9.75rem;
+    left: calc(50% + 26.45rem); /* just right of the content column */
+    width: max-content;
+    /* never reach past the viewport edge */
+    max-width: calc(50vw - 26.45rem - 8px);
   }
 
   .toc-title {
@@ -344,12 +346,15 @@ a {
 
   .toc a {
     display: block;
-    padding: 0.26rem var(--space-4);
+    padding: 0.26rem var(--space-2) 0.26rem var(--space-4);
     margin-left: -2px;
     border-left: 2px solid transparent;
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
   }
 
