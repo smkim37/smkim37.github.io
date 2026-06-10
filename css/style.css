@@ -310,7 +310,7 @@ a {
   display: none;
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1280px) {
   .nav-burger,
   .site-header.nav-open .site-nav,
   .site-nav {
@@ -322,8 +322,8 @@ a {
     position: fixed;
     z-index: 30;
     top: calc(var(--header-h) + var(--space-12));
-    left: calc(50% + 434px);
-    width: 156px;
+    right: var(--space-8);
+    width: 170px;
   }
 
   .toc-title {
@@ -401,13 +401,14 @@ a {
 .hero-name .name-accent {
   position: relative;
   white-space: nowrap;
-  /* Slow, subtle teal→cyan→green gradient drifting through the name */
+  /* Mostly text-colored, with a narrow teal-cyan sheen drifting through */
   background-image: linear-gradient(
     105deg,
     var(--text) 0%,
-    var(--name-grad-1) 30%,
-    var(--name-grad-2) 50%,
-    var(--name-grad-3) 70%,
+    var(--text) 40%,
+    var(--name-grad-1) 50%,
+    var(--name-grad-2) 56%,
+    var(--text) 66%,
     var(--text) 100%
   );
   background-size: 300% 100%;
@@ -510,11 +511,11 @@ a {
 
 .interests-label {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text-muted);
+  color: var(--text);
   margin: 0 0 var(--space-3);
 }
 

@@ -253,7 +253,7 @@
   function renderTeaching() {
     container("teaching").innerHTML =
       rowList(SITE.teaching.map(function (c) {
-        return { title: t(c.course), sub: t(c.school), date: t(c.term) };
+        return { title: t(c.course), sub: label("ta") + ", " + t(c.school), date: t(c.term) };
       }));
   }
 

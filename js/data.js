@@ -29,9 +29,9 @@ const SITE = {
       patents:        { en: "Patents",           ko: "특허" },
       workExperience: { en: "Work Experience",   ko: "경력" },
       projects:       { en: "Projects",          ko: "연구 과제" },
-      fellowships:    { en: "Fellowships",       ko: "펠로우십·장학금" },
-      awards:         { en: "Awards",            ko: "수상" },
-      talks:          { en: "Talks",             ko: "초청 발표" },
+      fellowships:    { en: "Fellowships & Scholarships", ko: "펠로우십·장학금" },
+      awards:         { en: "Honors & Awards",   ko: "수상 내역" },
+      talks:          { en: "Invited Talks",     ko: "초청 발표" },
       teaching:       { en: "Teaching",          ko: "강의" },
       services:       { en: "Academic Services", ko: "학술 활동" },
       activities:     { en: "Activities",        ko: "대외 활동" },
@@ -47,6 +47,7 @@ const SITE = {
       eqContrib:   { en: "* equal contribution",       ko: "* 공동 1저자" },
       corresp:     { en: "† corresponding author",     ko: "† 교신저자" },
       inventors:   { en: "Inventors",                  ko: "발명자" },
+      ta:          { en: "Teaching Assistant",         ko: "조교" },
       backToTop:   { en: "Back to top",                ko: "맨 위로" },
       themeToggle: { en: "Toggle dark mode",           ko: "다크 모드 전환" },
       langToggle:  { en: "한국어로 보기",               ko: "View in English" },
@@ -60,8 +61,8 @@ const SITE = {
   profile: {
     name:  { en: "Sumin Kim", ko: "김수민" },
     title: {
-      en: "Integrated M.S./Ph.D. Student in Data Science",
-      ko: "데이터사이언스 석박사통합과정",
+      en: "Integrated M.S./Ph.D. Student",
+      ko: "석박사통합과정",
     },
     lab: {
       name: { en: "Visual Information Processing Lab", ko: "시각정보처리 연구실" },
@@ -117,29 +118,10 @@ const SITE = {
     },
   ],
 
-  /* ---------- News (newest first; `highlight: true` = accent border) ---------- */
+  /* ---------- News (newest first; `highlight: true` = accent border)
+   * Keep this list focused: program admissions, paper acceptances,
+   * and reviewer service only. ---------- */
   news: [
-    {
-      date: { en: "May 2026", ko: "2026.05" },
-      text: {
-        en: "Gave an invited talk at Sungkyunkwan University: “Where Do Good Research Ideas Come From?”",
-        ko: "성균관대학교에서 “좋은 연구 아이디어는 어디에서 오는가?”를 주제로 초청 발표를 했습니다.",
-      },
-    },
-    {
-      date: { en: "Apr–May 2026", ko: "2026.04–05" },
-      text: {
-        en: "Filed two Korean patent applications on video summarization methods.",
-        ko: "비디오 요약 기술에 관한 국내 특허 2건을 출원했습니다.",
-      },
-    },
-    {
-      date: { en: "Mar 2026", ko: "2026.03" },
-      text: {
-        en: "Gave an invited talk at the 6th HAYAKU Conference (Yonsei Univ.): “Why Do We Pursue Graduate Studies?”",
-        ko: "제6회 HAYAKU 콘퍼런스(연세대)에서 “우리는 왜 대학원에 가는가?”를 주제로 발표했습니다.",
-      },
-    },
     {
       date: { en: "Jan 2026", ko: "2026.01" },
       highlight: true,
@@ -153,27 +135,6 @@ const SITE = {
       text: {
         en: "Serving as a reviewer for ICML 2026 and NeurIPS 2026.",
         ko: "ICML 2026, NeurIPS 2026 리뷰어로 활동하고 있습니다.",
-      },
-    },
-    {
-      date: { en: "Sep 2025", ko: "2025.09" },
-      text: {
-        en: "Selected for the NRF Basic Science Research Program — leading a project on multimodal fusion for video summarization.",
-        ko: "한국연구재단 기초연구사업에 선정되어 멀티모달 융합 기반 비디오 요약 연구 과제를 이끌고 있습니다.",
-      },
-    },
-    {
-      date: { en: "Sep 2025", ko: "2025.09" },
-      text: {
-        en: "Gave an invited talk at the 5th HAYAKU Conference (Korea Univ.): “Multimodal Video Summarization Research”.",
-        ko: "제5회 HAYAKU 콘퍼런스(고려대)에서 “멀티모달 비디오 요약 연구”를 주제로 발표했습니다.",
-      },
-    },
-    {
-      date: { en: "Aug 2025", ko: "2025.08" },
-      text: {
-        en: "Received the Yulchon AI Research Fellowship.",
-        ko: "율촌 AI 연구 펠로우십에 선정되었습니다.",
       },
     },
     {
@@ -513,8 +474,8 @@ const SITE = {
       ko: "© 2026 김수민. All rights reserved.",
     },
     sub: {
-      en: "Visual Information Processing Lab, Seoul National University · Last updated June 2026",
-      ko: "서울대학교 시각정보처리 연구실 · 2026년 6월 업데이트",
+      en: "Last updated June 10, 2026",
+      ko: "2026년 6월 10일 업데이트",
     },
   },
 };
