@@ -59,7 +59,7 @@ const SITE = {
 
   /* ---------- Profile / hero / about ---------- */
   profile: {
-    name:  { en: "Sumin Kim", ko: "김수민" },
+    name: "Sumin Kim", // shown in English in both languages
     title: {
       en: "Integrated M.S./Ph.D. Student",
       ko: "석박사통합과정",
@@ -112,7 +112,7 @@ const SITE = {
     },
     {
       school: { en: "Sungkyunkwan University", ko: "성균관대학교" },
-      degree: { en: "B.S. in Applied Artificial Intelligence", ko: "응용인공지능 학사" },
+      degree: { en: "B.S. in Applied Artificial Intelligence", ko: "인공지능융합 학사" },
       period: { en: "Mar 2020 – Feb 2025", ko: "2020.03 – 2025.02" },
       note: { en: "GPA 4.23/4.50 · Magna Cum Laude", ko: "GPA 4.23/4.50 · 우등 졸업" },
     },
@@ -227,7 +227,7 @@ const SITE = {
   /* ---------- Experience & Projects ---------- */
   experience: [
     {
-      role: { en: "Undergraduate Researcher", ko: "학부연구생" },
+      role: { en: "Undergraduate Research Intern", ko: "학부 연구 인턴" },
       org: {
         en: "Center for Artificial Intelligence, AI & Robotics Institute, KIST",
         ko: "한국과학기술연구원(KIST) AI·로봇연구소 인공지능연구센터",
@@ -350,8 +350,9 @@ const SITE = {
     },
     {
       name: { en: "President’s List Award, University-wide Undergraduate Honor", ko: "President’s List, 전교 우수 학부생" },
-      org: { en: "Sungkyunkwan University — one of top 20 students university-wide", ko: "성균관대학교 — 전교 20명 선발" },
+      org: { en: "Sungkyunkwan University", ko: "성균관대학교" },
       year: { en: "Dec 2022", ko: "2022.12" },
+      note: { en: "Selected as one of the top 20 students university-wide", ko: "전교 20명 선발" },
     },
     {
       name: { en: "Excellence Award, Web Development Competition Using AI", ko: "우수상, AI 활용 웹 개발 경진대회" },
@@ -391,12 +392,12 @@ const SITE = {
 
   teaching: [
     {
-      course: { en: "Machine Learning for Visual Understanding", ko: "시각 이해를 위한 기계학습" },
+      course: { en: "Machine Learning for Visual Understanding", ko: "시각적 이해를 위한 기계학습" },
       school: { en: "Seoul National University", ko: "서울대학교" },
       term: { en: "Spring 2026", ko: "2026년 1학기" },
     },
     {
-      course: { en: "Core Computing: Thinking with Computers", ko: "핵심컴퓨팅: 컴퓨터와 함께 생각하기" },
+      course: { en: "Core Computing: Thinking with Computers", ko: "컴퓨팅핵심: 컴퓨터로 생각하기" },
       school: { en: "Seoul National University", ko: "서울대학교" },
       term: { en: "Spring 2026", ko: "2026년 1학기" },
     },
@@ -406,12 +407,12 @@ const SITE = {
       term: { en: "Winter 2026", ko: "2026년 겨울학기" },
     },
     {
-      course: { en: "Core Computing: Thinking with Computers", ko: "핵심컴퓨팅: 컴퓨터와 함께 생각하기" },
+      course: { en: "Core Computing: Thinking with Computers", ko: "컴퓨팅핵심: 컴퓨터로 생각하기" },
       school: { en: "Seoul National University", ko: "서울대학교" },
       term: { en: "Fall 2025", ko: "2025년 2학기" },
     },
     {
-      course: { en: "Basic Computing: First Adventures in Computing", ko: "기초컴퓨팅: 컴퓨팅 첫걸음" },
+      course: { en: "Basic Computing: First Adventures in Computing", ko: "컴퓨팅 기초: 처음 만나는 컴퓨팅" },
       school: { en: "Seoul National University", ko: "서울대학교" },
       term: { en: "Summer 2025", ko: "2025년 여름학기" },
     },
@@ -421,7 +422,7 @@ const SITE = {
       term: { en: "Spring 2024", ko: "2024년 1학기" },
     },
     {
-      course: { en: "Artificial Intelligence Basics & Uses", ko: "인공지능 기초와 활용" },
+      course: { en: "Artificial Intelligence Basics & Uses", ko: "AI 기초와 활용" },
       school: { en: "Sungkyunkwan University", ko: "성균관대학교" },
       term: { en: "Fall 2022", ko: "2022년 2학기" },
     },
@@ -442,37 +443,34 @@ const SITE = {
 
   activities: [
     {
-      role: { en: "Founding President", ko: "창립 회장" },
+      role: { en: "Founding President", ko: "초대 학회장" },
       org: { en: "AI Academic Student Society “brAIn”, Sungkyunkwan University", ko: "AI 학술 동아리 “brAIn”, 성균관대학교" },
       period: { en: "Sep 2024 – Feb 2025", ko: "2024.09 – 2025.02" },
     },
     {
-      role: { en: "President", ko: "회장" },
+      role: { en: "President", ko: "학생회장" },
       org: { en: "School of Global Convergence Student Council “cresc.”, Sungkyunkwan University", ko: "글로벌융합학부 학생회 “cresc.”, 성균관대학교" },
       period: { en: "Nov 2021 – Nov 2022", ko: "2021.11 – 2022.11" },
     },
     {
-      role: { en: "Member", ko: "위원" },
+      role: { en: "Member", ko: "중앙운영위원" },
       org: { en: "Central Student Steering Committee, Sungkyunkwan University", ko: "중앙운영위원회, 성균관대학교" },
       period: { en: "Nov 2021 – Nov 2022", ko: "2021.11 – 2022.11" },
     },
     {
-      role: { en: "President", ko: "회장" },
+      role: { en: "President", ko: "대표" },
       org: { en: "School of Global Convergence Ambassadors “Alimi”, Sungkyunkwan University", ko: "글로벌융합학부 홍보대사 “알리미”, 성균관대학교" },
       period: { en: "Sep 2021 – Aug 2022", ko: "2021.09 – 2022.08" },
     },
     {
       role: { en: "Visiting Student", ko: "방문 학생" },
-      org: { en: "Intensive Programming and Startup (CS496), KAIST", ko: "몰입형 프로그래밍 및 창업 (CS496), KAIST" },
+      org: { en: "Intensive Programming and Startup (CS496), KAIST", ko: "몰입캠프: 프로그래밍 및 창업 (CS496), KAIST" },
       period: { en: "Dec 2021 – Feb 2022", ko: "2021.12 – 2022.02" },
     },
   ],
 
   footer: {
-    copyright: {
-      en: "© 2026 Sumin Kim. All rights reserved.",
-      ko: "© 2026 김수민. All rights reserved.",
-    },
+    copyright: "© 2026 Sumin Kim. All rights reserved.",
     sub: {
       en: "Last updated June 10, 2026",
       ko: "2026년 6월 10일 업데이트",

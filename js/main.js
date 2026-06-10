@@ -239,7 +239,7 @@
   function renderAwards() {
     container("awards").innerHTML =
       rowList(SITE.awards.map(function (a) {
-        return { title: t(a.name), sub: t(a.org), date: t(a.year) };
+        return { title: t(a.name), sub: t(a.org), date: t(a.year), note: a.note ? t(a.note) : null };
       }));
   }
 

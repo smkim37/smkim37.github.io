@@ -49,7 +49,8 @@
   --name-grad-2: #0e7490;
   --name-grad-3: #15803d;
 
-  --header-h: 64px;
+  --header-h: 4rem;
+  --content-w: 51.25rem; /* 820px at full scale */
   --radius: 10px;
 
   color-scheme: light;
@@ -83,6 +84,8 @@
 }
 
 html {
+  /* Global scale: sized to look like ~93% browser zoom at default settings */
+  font-size: 93%;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 12px);
 }
@@ -178,7 +181,7 @@ a {
 }
 
 .header-inner {
-  max-width: 820px;
+  max-width: var(--content-w);
   margin-inline: auto;
   padding-inline: var(--space-6);
   height: var(--header-h);
@@ -221,7 +224,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 0 var(--space-6);
   padding: var(--space-3) var(--space-6);
-  max-width: 820px;
+  max-width: var(--content-w);
   margin-inline: auto;
 }
 
@@ -310,7 +313,7 @@ a {
   display: none;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1180px) {
   .nav-burger,
   .site-header.nav-open .site-nav,
   .site-nav {
@@ -322,8 +325,8 @@ a {
     position: fixed;
     z-index: 30;
     top: calc(var(--header-h) + var(--space-12));
-    right: var(--space-8);
-    width: 170px;
+    left: calc(50% + 27.125rem); /* just right of the content column */
+    width: 9.75rem;
   }
 
   .toc-title {
@@ -364,7 +367,7 @@ a {
 
 /* ===== 05. Hero / About ===== */
 .section {
-  max-width: 820px;
+  max-width: var(--content-w);
   margin-inline: auto;
   padding: var(--space-10) var(--space-6) var(--space-4);
 }
@@ -494,7 +497,7 @@ a {
 }
 
 .hero-portrait img {
-  width: 190px;
+  width: 11.875rem; /* 190px at full scale */
   height: auto;
   border-radius: 14px;
   box-shadow: var(--shadow-lift);
@@ -515,7 +518,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text);
+  color: var(--text-muted);
   margin: 0 0 var(--space-3);
 }
 
@@ -684,9 +687,13 @@ a {
   margin-bottom: var(--space-1);
 }
 
-.pub-authors strong {
+.pub-authors strong,
+.patent-meta strong {
   color: var(--text);
   font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
 }
 
 .pub-venue {
@@ -878,7 +885,7 @@ a {
 }
 
 .footer-inner {
-  max-width: 820px;
+  max-width: var(--content-w);
   margin-inline: auto;
   padding: var(--space-8) var(--space-6);
   text-align: center;
@@ -973,7 +980,7 @@ a {
   }
 
   .hero-portrait img {
-    width: 150px;
+    width: 9.375rem; /* 150px at full scale */
     margin-inline: auto;
   }
 
