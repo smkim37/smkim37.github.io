@@ -80,10 +80,7 @@
       '<span class="name-accent">' + esc(t(p.name)) + "</span>";
     container("heroTitle").textContent = t(p.title);
     container("heroAffiliation").innerHTML =
-      '<span class="affil-line"><a href="' + esc(p.lab.url) + '" target="_blank" rel="noopener">' +
-      esc(t(p.lab.name)) + "</a>, " +
-      '<a href="' + esc(p.universityUrl) + '" target="_blank" rel="noopener">' +
-      esc(t(p.university)) + "</a></span>" +
+      '<span class="affil-line">' + esc(t(p.lab.name)) + ", " + esc(t(p.university)) + "</span>" +
       '<span class="affil-line">' + esc(t(p.location)) +
       ' · <span class="affil-email">' + esc(p.emailDisplay) + "</span></span>";
     container("heroLinks").innerHTML = profileChips(p.links);

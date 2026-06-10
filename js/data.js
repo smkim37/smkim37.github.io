@@ -69,7 +69,6 @@ const SITE = {
       url: "https://vip.snu.ac.kr",
     },
     university: { en: "Seoul National University", ko: "서울대학교" },
-    universityUrl: "https://en.snu.ac.kr",
     email: "sumink@snu.ac.kr",
     emailDisplay: "sumink [at] snu.ac.kr", // spam-safe display form
     location: { en: "Seoul, South Korea", ko: "대한민국 서울" },
@@ -164,7 +163,7 @@ const SITE = {
       type: "conference",
       title: "TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization",
       authors: "Sumin Kim*, Hyemin Jeong*, Mingu Kang*, Yejin Kim, Yoori Oh†, and Joonseok Lee†",
-      venue: "International Conference on Learning Representations (ICLR), 2026",
+      venue: "International Conference on Learning Representations, 2026",
       venueTag: "ICLR 2026",
       award: null,
       links: [
@@ -180,7 +179,7 @@ const SITE = {
       type: "conference",
       title: "SummDiff: Generative Modeling of Video Summarization with Diffusion",
       authors: "Kwanseok Kim*, Jaehoon Hahm*, Sumin Kim, Jinhwan Sul, Byunghak Kim, and Joonseok Lee†",
-      venue: "International Conference on Computer Vision (ICCV), 2025",
+      venue: "International Conference on Computer Vision, 2025",
       venueTag: "ICCV 2025",
       award: { en: "Highlight Presentation (top 2.34%)", ko: "Highlight 발표 (상위 2.34%)" },
       links: [
@@ -232,7 +231,7 @@ const SITE = {
   /* ---------- Experience & Projects ---------- */
   experience: [
     {
-      role: { en: "Undergraduate Research Intern", ko: "학부 연구 인턴" },
+      role: { en: "Research Intern", ko: "연구 인턴" },
       org: {
         en: "Center for Artificial Intelligence, AI & Robotics Institute, KIST",
         ko: "한국과학기술연구원(KIST) AI·로봇연구소 인공지능연구센터",

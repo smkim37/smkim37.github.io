@@ -756,7 +756,7 @@ a {
 /* ===== 07. Publications & patents ===== */
 .pub-card {
   position: relative;
-  padding: 0.5rem var(--space-6) 0.6rem;
+  padding: 0.3rem var(--space-6) 0.6rem;
   margin-bottom: var(--space-3);
   line-height: 1.4;
   border: 1px solid var(--border);
@@ -1135,7 +1135,7 @@ a {
   }
 
   .pub-card {
-    padding: 0.5rem var(--space-4) 0.6rem;
+    padding: 0.3rem var(--space-4) 0.6rem;
   }
 
   .edu-item,
