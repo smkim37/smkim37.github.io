@@ -941,7 +941,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--space-4);
+  /* tight row gap so the period/location row hugs the org line when it
+     wraps below on narrow screens; normal column gap side by side */
+  gap: 0.15rem var(--space-4);
   flex-wrap: wrap;
 }
 
@@ -973,13 +975,12 @@ a {
   font-size: 0.9rem;
   color: var(--accent);
   font-weight: 500;
-  margin-bottom: var(--space-2);
 }
 
 .timeline-desc {
   font-size: 0.92rem;
   color: var(--text-muted);
-  margin: 0;
+  margin: 0.4rem 0 0;
 }
 
 /* Compact rows: fellowships, awards, talks, teaching, activities */
