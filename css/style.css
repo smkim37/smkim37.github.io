@@ -756,8 +756,9 @@ a {
 /* ===== 07. Publications & patents ===== */
 .pub-card {
   position: relative;
-  padding: 0.7rem var(--space-6);
-  margin-bottom: var(--space-4);
+  padding: 0.5rem var(--space-6) 0.6rem;
+  margin-bottom: var(--space-3);
+  line-height: 1.4;
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
   border-radius: var(--radius);
@@ -793,14 +794,15 @@ a {
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: var(--space-1);
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
   padding-right: 2.2rem; /* keep clear of the .pub-id circle */
 }
 
 .pub-authors {
   font-size: 0.84rem;
   color: var(--text-muted);
-  margin-bottom: var(--space-1);
+  margin-bottom: 0.1rem;
 }
 
 .pub-authors strong,
@@ -813,19 +815,25 @@ a {
 }
 
 .pub-venue {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-style: italic;
   color: var(--text-muted);
-  margin-bottom: var(--space-2);
+  margin-bottom: 0.25rem;
+}
+
+.pub-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.45rem;
 }
 
 .pub-venue-tag,
 .pub-award {
   display: inline-block;
-  padding: 0.15rem 0.6rem;
-  margin-left: var(--space-2);
+  padding: 0.12rem 0.6rem;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 600;
   background: var(--accent-soft);
@@ -1127,7 +1135,7 @@ a {
   }
 
   .pub-card {
-    padding: var(--space-4);
+    padding: 0.5rem var(--space-4) 0.6rem;
   }
 
   .edu-item,

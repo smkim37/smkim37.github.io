@@ -61,26 +61,23 @@ const SITE = {
   profile: {
     name: "Sumin Kim", // shown in English in both languages
     title: {
-      en: "Integrated M.S./Ph.D. Student",
-      ko: "석박사통합과정",
+      en: "Ph.D. Student",
+      ko: "박사과정",
     },
     lab: {
       name: { en: "Visual Information Processing Lab", ko: "시각정보처리 연구실" },
       url: "https://vip.snu.ac.kr",
     },
     university: { en: "Seoul National University", ko: "서울대학교" },
-    advisor: {
-      prefix: { en: "Advised by", ko: "지도교수:" },
-      name:   { en: "Prof. Joonseok Lee", ko: "이준석 교수님" },
-      url: "http://www.joonseok.net/home.html",
-    },
+    universityUrl: "https://en.snu.ac.kr",
     email: "sumink@snu.ac.kr",
     emailDisplay: "sumink [at] snu.ac.kr", // spam-safe display form
     location: { en: "Seoul, South Korea", ko: "대한민국 서울" },
+    // Simple <a> tags are allowed inside bio paragraphs.
     bio: [
       {
-        en: "I am a second-year Integrated M.S./Ph.D. student in Data Science at Seoul National University, where I am fortunate to be advised by Prof. Joonseok Lee as a member of the Visual Information Processing Lab. Prior to that, I received my B.S. in Applied Artificial Intelligence from Sungkyunkwan University.",
-        ko: "서울대학교 데이터사이언스 석박사통합과정 2년차로, 시각정보처리 연구실에서 이준석 교수님의 지도를 받고 있습니다. 그 전에는 성균관대학교에서 인공지능융합 학사 학위를 받았습니다.",
+        en: 'I am a second-year Integrated M.S./Ph.D. student in <a href="https://gsds.snu.ac.kr" target="_blank" rel="noopener">Data Science</a> at <a href="https://en.snu.ac.kr" target="_blank" rel="noopener">Seoul National University</a>, where I am fortunate to be advised by <a href="http://www.joonseok.net/home.html" target="_blank" rel="noopener">Prof. Joonseok Lee</a> as a member of the <a href="https://vip.snu.ac.kr" target="_blank" rel="noopener">Visual Information Processing Lab</a>. Prior to that, I received my B.S. in <a href="https://sw.skku.edu/eng_sw/index.do" target="_blank" rel="noopener">Applied Artificial Intelligence</a> from <a href="https://www.skku.edu/eng/index.do" target="_blank" rel="noopener">Sungkyunkwan University</a>.',
+        ko: '<a href="https://www.snu.ac.kr" target="_blank" rel="noopener">서울대학교</a> <a href="https://gsds.snu.ac.kr" target="_blank" rel="noopener">데이터사이언스</a> 석박사통합과정 2년차로, <a href="https://vip.snu.ac.kr" target="_blank" rel="noopener">시각정보처리 연구실</a>에서 <a href="http://www.joonseok.net/home.html" target="_blank" rel="noopener">이준석 교수님</a>의 지도를 받고 있습니다. 그 전에는 <a href="https://www.skku.edu" target="_blank" rel="noopener">성균관대학교</a>에서 <a href="https://sw.skku.edu" target="_blank" rel="noopener">인공지능융합</a> 학사 학위를 받았습니다.',
       },
       {
         en: "My research lies at the intersection of computer vision and multimodal learning, with a focus on video understanding. I am particularly interested in learning spatiotemporal video representations that enable machines to effectively perceive and reason over multimodal signals. My recent work centers on multimodal video summarization, spanning generative modeling and end-to-end learning approaches.",

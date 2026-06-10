@@ -81,16 +81,15 @@
     container("heroTitle").textContent = t(p.title);
     container("heroAffiliation").innerHTML =
       '<span class="affil-line"><a href="' + esc(p.lab.url) + '" target="_blank" rel="noopener">' +
-      esc(t(p.lab.name)) + "</a>, " + esc(t(p.university)) + "</span>" +
-      '<span class="affil-line">' + esc(t(p.advisor.prefix)) + " " +
-      '<a href="' + esc(p.advisor.url) + '" target="_blank" rel="noopener">' +
-      esc(t(p.advisor.name)) + "</a></span>" +
+      esc(t(p.lab.name)) + "</a>, " +
+      '<a href="' + esc(p.universityUrl) + '" target="_blank" rel="noopener">' +
+      esc(t(p.university)) + "</a></span>" +
       '<span class="affil-line">' + esc(t(p.location)) +
       ' · <span class="affil-email">' + esc(p.emailDisplay) + "</span></span>";
     container("heroLinks").innerHTML = profileChips(p.links);
     container("bio").innerHTML = p.bio
       .map(function (para) {
-        return "<p>" + esc(t(para)) + "</p>";
+        return "<p>" + t(para) + "</p>"; // trusted author-written HTML (allows <a>)
       })
       .join("");
 
@@ -147,10 +146,13 @@
       (p.id ? '<span class="pub-id" aria-hidden="true">' + esc(p.id) + "</span>" : "") +
       '<h4 class="pub-title">' + esc(p.title) + "</h4>" +
       '<p class="pub-authors">' + boldMyName(p.authors) + "</p>" +
-      '<p class="pub-venue">' + esc(t(p.venue)) +
-      (p.venueTag ? '<span class="pub-venue-tag">' + esc(p.venueTag) + "</span>" : "") +
-      (p.award ? '<span class="pub-award">' + esc(t(p.award)) + "</span>" : "") +
-      "</p>" +
+      '<p class="pub-venue">' + esc(t(p.venue)) + "</p>" +
+      (p.venueTag || p.award
+        ? '<div class="pub-badges">' +
+          (p.venueTag ? '<span class="pub-venue-tag">' + esc(p.venueTag) + "</span>" : "") +
+          (p.award ? '<span class="pub-award">' + esc(t(p.award)) + "</span>" : "") +
+          "</div>"
+        : "") +
       (p.links && p.links.length
         ? '<div class="pub-links">' +
           p.links.map(function (l) {
