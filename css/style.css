@@ -425,7 +425,7 @@ a {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  animation: name-gradient 9s ease-in-out infinite;
+  animation: name-gradient 6s ease-in-out infinite;
 }
 
 @keyframes name-gradient {
@@ -511,6 +511,14 @@ a {
 .bio {
   font-size: 1.02rem;
   margin-bottom: var(--space-6);
+}
+
+.bio p {
+  margin: 0 0 var(--space-4);
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
 }
 
 .interests {

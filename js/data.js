@@ -77,10 +77,16 @@ const SITE = {
     email: "sumink@snu.ac.kr",
     emailDisplay: "sumink [at] snu.ac.kr", // spam-safe display form
     location: { en: "Seoul, South Korea", ko: "대한민국 서울" },
-    bio: {
-      en: "I am a second-year Integrated MS/PhD student at Seoul National University, advised by Professor Joonseok Lee at the Visual Information Processing Lab. My research focuses on computer vision, video understanding, and multimodal learning, with an emphasis on learning spatiotemporal video representations for effective perception and reasoning over multimodal signals.",
-      ko: "서울대학교 시각정보처리 연구실에서 이준석 교수님의 지도 아래 석박사통합과정 2년차로 연구하고 있습니다. 컴퓨터 비전, 비디오 이해, 멀티모달 학습을 연구하며, 특히 멀티모달 신호에 대한 효과적인 인지와 추론을 위한 시공간 비디오 표현 학습에 중점을 두고 있습니다.",
-    },
+    bio: [
+      {
+        en: "I am a second-year Integrated M.S./Ph.D. student in Data Science at Seoul National University, where I am fortunate to be advised by Prof. Joonseok Lee as a member of the Visual Information Processing Lab. Prior to that, I received my B.S. in Applied Artificial Intelligence from Sungkyunkwan University.",
+        ko: "서울대학교 데이터사이언스 석박사통합과정 2년차로, 시각정보처리 연구실에서 이준석 교수님의 지도를 받고 있습니다. 그 전에는 성균관대학교에서 인공지능융합 학사 학위를 받았습니다.",
+      },
+      {
+        en: "My research lies at the intersection of computer vision and multimodal learning, with a focus on video understanding. I am particularly interested in learning spatiotemporal video representations that enable machines to effectively perceive and reason over multimodal signals. My recent work centers on multimodal video summarization, spanning generative modeling and end-to-end learning approaches.",
+        ko: "컴퓨터 비전과 멀티모달 학습의 교차점에서 비디오 이해를 중심으로 연구하고 있습니다. 특히 기계가 멀티모달 신호를 효과적으로 인지하고 추론할 수 있도록 하는 시공간 비디오 표현 학습에 관심이 많습니다. 최근에는 생성 모델링과 end-to-end 학습을 아우르는 멀티모달 비디오 요약 연구에 집중하고 있습니다.",
+      },
+    ],
     interests: {
       broad: {
         en: ["Video Understanding", "Representation Learning", "Multimodal Learning"],

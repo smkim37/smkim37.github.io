@@ -88,7 +88,11 @@
       '<span class="affil-line">' + esc(t(p.location)) +
       ' · <span class="affil-email">' + esc(p.emailDisplay) + "</span></span>";
     container("heroLinks").innerHTML = profileChips(p.links);
-    container("bio").textContent = t(p.bio);
+    container("bio").innerHTML = p.bio
+      .map(function (para) {
+        return "<p>" + esc(t(para)) + "</p>";
+      })
+      .join("");
 
     const tagRow = function (items, cls) {
       return (
