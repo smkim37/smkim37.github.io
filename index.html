@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sumin Kim — Ph.D. Student, Seoul National University</title>
+  <meta name="description" content="Sumin Kim is a Ph.D. student at Seoul National University researching computer vision, video understanding, and multimodal learning at the Visual Information Processing Lab." />
+  <link rel="canonical" href="https://smkim37.github.io/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Sumin Kim — Ph.D. Student, Seoul National University" />
+  <meta property="og:description" content="Researching computer vision, video understanding, and multimodal learning at the Visual Information Processing Lab, SNU." />
+  <meta property="og:url" content="https://smkim37.github.io/" />
+  <meta property="og:image" content="https://smkim37.github.io/assets/suminkim_image.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f1719" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Apply saved theme before first paint (avoids dark-mode flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sumin Kim",
+    "url": "https://smkim37.github.io/",
+    "image": "https://smkim37.github.io/assets/suminkim_image.jpg",
+    "jobTitle": "Ph.D. Student in Data Science",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Seoul National University"
+    },
+    "email": "mailto:sumink@snu.ac.kr",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=-CnUimcAAAAJ",
+      "https://github.com/smkim37",
+      "https://www.linkedin.com/in/smkim37"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#about" data-i18n="labels.skipLink">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Sumin Kim — home">Sumin&nbsp;Kim</a>
+
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#news" data-i18n="nav.news">News</a></li>
+          <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#awards" data-i18n="nav.awards">Awards</a></li>
+          <li><a href="#misc" data-i18n="nav.misc">Talks &amp; Service</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="lang-toggle" class="icon-btn lang-btn" type="button" aria-label="한국어로 보기">한국어</button>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+          <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+        </button>
+        <button id="nav-toggle" class="icon-btn nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-header">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="burger-open" d="M4 7h16M4 12h16M4 17h16"/><path class="burger-close" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <noscript>
+      <p style="max-width:820px;margin:2rem auto;padding:0 1.5rem;">
+        I am Sumin Kim, a Ph.D. student at Seoul National University researching computer vision,
+        video understanding, and multimodal learning at the Visual Information Processing Lab.
+        This page works best with JavaScript enabled — meanwhile, you can reach me at
+        <a href="mailto:sumink@snu.ac.kr">sumink@snu.ac.kr</a> or read my
+        <a href="assets/suminkim_cv.pdf">CV (PDF)</a>.
+      </p>
+    </noscript>
+
+    <!-- ===== About / Hero ===== -->
+    <section id="about" aria-labelledby="about-heading" class="section section-hero">
+      <div class="hero reveal">
+        <div class="hero-text">
+          <p class="hero-eyebrow" data-i18n="labels.heroEyebrow">Hello, I am</p>
+          <h1 id="about-heading" class="hero-name" data-render="heroName">Sumin Kim</h1>
+          <p class="hero-title" data-render="heroTitle"></p>
+          <p class="hero-affiliation" data-render="heroAffiliation"></p>
+          <div class="hero-links" data-render="heroLinks"></div>
+        </div>
+        <div class="hero-portrait">
+          <img src="assets/suminkim_image.jpg" alt="Portrait of Sumin Kim" width="323" height="431" />
+        </div>
+      </div>
+
+      <div class="about-body reveal">
+        <p class="bio" data-render="bio"></p>
+        <div class="interests" data-render="interests"></div>
+        <div class="education" data-render="education"></div>
+      </div>
+    </section>
+
+    <!-- ===== News ===== -->
+    <section id="news" aria-labelledby="news-heading" class="section">
+      <h2 id="news-heading" class="section-title reveal" data-i18n="nav.news">News</h2>
+      <div data-render="news"></div>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section id="publications" aria-labelledby="publications-heading" class="section">
+      <h2 id="publications-heading" class="section-title reveal" data-i18n="nav.publications">Publications</h2>
+      <div data-render="publications"></div>
+    </section>
+
+    <!-- ===== Experience & Projects ===== -->
+    <section id="experience" aria-labelledby="experience-heading" class="section">
+      <h2 id="experience-heading" class="section-title reveal" data-i18n="nav.experience">Experience</h2>
+      <div data-render="experience"></div>
+    </section>
+
+    <!-- ===== Awards & Fellowships ===== -->
+    <section id="awards" aria-labelledby="awards-heading" class="section">
+      <h2 id="awards-heading" class="section-title reveal" data-i18n="nav.awards">Awards</h2>
+      <div data-render="awards"></div>
+    </section>
+
+    <!-- ===== Talks, Teaching & Service ===== -->
+    <section id="misc" aria-labelledby="misc-heading" class="section">
+      <h2 id="misc-heading" class="section-title reveal" data-i18n="nav.misc">Talks &amp; Service</h2>
+      <div data-render="misc"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links" data-render="footerLinks"></div>
+      <p class="footer-note" data-render="footerNote"></p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" hidden>
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
