@@ -541,22 +541,46 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent), var(--name-grad-2));
+  /* deep teal — dark enough for white ink in both themes */
+  background: linear-gradient(150deg, #115e59 0%, #0f3f44 55%, #0c2b30 100%);
   box-shadow: var(--shadow-lift);
 }
 
+.flip-back-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .signature {
-  font-family: "Great Vibes", cursive;
-  font-size: 2.2rem;
-  line-height: 1.15;
+  font-family: "Allura", cursive;
+  font-size: 2.4rem;
+  line-height: 1.1;
   text-align: center;
   color: #ffffff;
-  transform: rotate(-5deg);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+  transform: rotate(-4deg);
   user-select: none;
 }
 
-[data-theme="dark"] .signature {
-  color: #0f1719; /* bright teal back needs dark ink */
+.motto {
+  margin-top: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  user-select: none;
+}
+
+.motto::before {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 1px;
+  margin: 0 auto 0.7rem;
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .bio {
@@ -1049,6 +1073,10 @@ a {
 
   .hero-portrait img {
     width: 9.375rem; /* 150px at full scale */
+  }
+
+  .signature {
+    font-size: 2rem; /* keep side margins on the narrower card */
   }
 
   .hero-links {
