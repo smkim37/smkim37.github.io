@@ -47,6 +47,7 @@ Copy a block at the top of the `publications` array:
   title: "Paper Title Stays in English",
   authors: "Sumin Kim*, Coauthor Name†, ...", // your name is bolded automatically
   venue: "Conference on Neural Information Processing Systems (NeurIPS), 2026",
+  venueTag: "NeurIPS 2026", // solid badge next to the venue; omit for preprints
   award: { en: "Oral Presentation", ko: "구두 발표" }, // or null
   links: [
     { label: "Paper", url: "https://..." },

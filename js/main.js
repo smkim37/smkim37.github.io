@@ -144,9 +144,11 @@
   function pubCard(p, i) {
     return (
       '<article class="pub-card reveal" style="transition-delay:' + Math.min(i * 60, 200) + 'ms">' +
+      (p.id ? '<span class="pub-id" aria-hidden="true">' + esc(p.id) + "</span>" : "") +
       '<h4 class="pub-title">' + esc(p.title) + "</h4>" +
       '<p class="pub-authors">' + boldMyName(p.authors) + "</p>" +
       '<p class="pub-venue">' + esc(t(p.venue)) +
+      (p.venueTag ? '<span class="pub-venue-tag">' + esc(p.venueTag) + "</span>" : "") +
       (p.award ? '<span class="pub-award">' + esc(t(p.award)) + "</span>" : "") +
       "</p>" +
       (p.links && p.links.length

@@ -514,7 +514,14 @@ a {
   transition: transform 0.6s ease;
 }
 
-.flip-card:hover .flip-inner,
+/* Hover-flip only on devices with a real pointer — on touch screens a
+   tap leaves :hover "stuck", which kept the card from flipping back */
+@media (hover: hover) {
+  .flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
 .flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
 }
@@ -671,9 +678,9 @@ a {
 
 /* ===== 05. Shared section styles ===== */
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
   padding-bottom: var(--space-2);
   position: relative;
 }
@@ -748,9 +755,11 @@ a {
 
 /* ===== 07. Publications & patents ===== */
 .pub-card {
-  padding: var(--space-4) var(--space-6);
+  position: relative;
+  padding: 0.7rem var(--space-6);
   margin-bottom: var(--space-4);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
   border-radius: var(--radius);
   background: var(--bg);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -760,6 +769,24 @@ a {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lift);
   border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  border-left-color: var(--accent);
+}
+
+/* Small circular C1/C2/P1/P2 marker in the top-right corner */
+.pub-id {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-soft-text);
+  font-size: 0.68rem;
+  font-weight: 700;
 }
 
 .pub-title {
@@ -767,10 +794,11 @@ a {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: var(--space-1);
+  padding-right: 2.2rem; /* keep clear of the .pub-id circle */
 }
 
 .pub-authors {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
   margin-bottom: var(--space-1);
 }
@@ -791,6 +819,7 @@ a {
   margin-bottom: var(--space-2);
 }
 
+.pub-venue-tag,
 .pub-award {
   display: inline-block;
   padding: 0.15rem 0.6rem;
@@ -801,6 +830,16 @@ a {
   font-weight: 600;
   background: var(--accent-soft);
   color: var(--accent-soft-text);
+  white-space: nowrap;
+}
+
+.pub-venue-tag {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .pub-venue-tag {
+  color: #0f1719;
 }
 
 .pub-links {
@@ -967,7 +1006,7 @@ a {
 
 /* ===== 09. Footer & back-to-top ===== */
 .site-footer {
-  margin-top: var(--space-12);
+  margin-top: 4.5rem;
   border-top: 1px solid var(--border);
   background: var(--bg-alt);
 }

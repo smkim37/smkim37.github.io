@@ -168,6 +168,7 @@ const SITE = {
       title: "TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization",
       authors: "Sumin Kim*, Hyemin Jeong*, Mingu Kang*, Yejin Kim, Yoori Oh†, and Joonseok Lee†",
       venue: "International Conference on Learning Representations (ICLR), 2026",
+      venueTag: "ICLR 2026",
       award: null,
       links: [
         { label: "Paper",   url: "https://openreview.net/pdf?id=x74NsHGywD" },
@@ -183,6 +184,7 @@ const SITE = {
       title: "SummDiff: Generative Modeling of Video Summarization with Diffusion",
       authors: "Kwanseok Kim*, Jaehoon Hahm*, Sumin Kim, Jinhwan Sul, Byunghak Kim, and Joonseok Lee†",
       venue: "International Conference on Computer Vision (ICCV), 2025",
+      venueTag: "ICCV 2025",
       award: { en: "Highlight Presentation (top 2.34%)", ko: "Highlight 발표 (상위 2.34%)" },
       links: [
         { label: "Paper",   url: "https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_SummDiff_Generative_Modeling_of_Video_Summarization_with_Diffusion_ICCV_2025_paper.pdf" },
