@@ -47,7 +47,6 @@
   /* Animated gradient stops for the hero name */
   --name-grad-1: #0f766e;
   --name-grad-2: #0e7490;
-  --name-grad-3: #15803d;
 
   --header-h: 4rem;
   --content-w: 51.25rem; /* 820px at full scale */
@@ -71,7 +70,6 @@
 
   --name-grad-1: #2dd4bf;
   --name-grad-2: #22d3ee;
-  --name-grad-3: #4ade80;
 
   color-scheme: dark;
 }
@@ -128,10 +126,8 @@ a {
 }
 
 /* Animated underline for in-text links */
-.u-link,
 .bio a,
-.news-text a,
-.hero-affiliation a {
+.news-text a {
   background-image: linear-gradient(var(--accent), var(--accent));
   background-repeat: no-repeat;
   background-position: 0 100%;
@@ -139,10 +135,8 @@ a {
   transition: background-size 0.25s ease, color 0.15s ease;
 }
 
-.u-link:hover,
 .bio a:hover,
-.news-text a:hover,
-.hero-affiliation a:hover {
+.news-text a:hover {
   background-size: 100% 1.5px;
   color: var(--accent-hover);
 }

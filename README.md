@@ -21,7 +21,10 @@ Items render in array order, so put the newest first.
 
 ### Add a news item
 
-Copy a block at the top of the `news` array:
+By convention this list stays focused: program admissions, paper
+acceptances, and reviewer service only (no talks, patents, or awards —
+those have their own sections). Copy a block at the top of the `news`
+array:
 
 ```js
 {
@@ -34,7 +37,9 @@ Copy a block at the top of the `news` array:
 },
 ```
 
-`<b>` and `<a href="...">` tags are allowed inside news `text` only.
+`<b>` and `<a href="...">` tags are allowed inside news `text` and the
+`profile.bio` paragraphs; everywhere else content is rendered as plain
+text.
 
 ### Add a publication
 
@@ -42,7 +47,7 @@ Copy a block at the top of the `publications` array:
 
 ```js
 {
-  id: "C3",
+  id: "C3", // shown in the circle at the card's top-right corner
   type: "conference", // or "preprint" — controls which subsection it appears in
   title: "Paper Title Stays in English",
   authors: "Sumin Kim*, Coauthor Name†, ...", // your name is bolded automatically
@@ -62,7 +67,14 @@ Copy a block at the top of the `publications` array:
 `patents`, `experience`, `projects`, `fellowships`, `awards`, `talks`,
 `teaching`, `service`, `activities`, `education`, and the `profile`
 (bio, interests, contact links) follow the same copy-an-object pattern —
-each array is commented in `js/data.js`.
+each array is commented in `js/data.js`. Notes:
+
+- `education` and `experience` items take an optional
+  `location: { en, ko }` shown under the period.
+- `fellowships` and `awards` items take an optional `note: { en, ko }`
+  rendered as a highlight badge.
+- The default theme is always light; visitors' OS dark mode is ignored
+  until they use the toggle (choice saved per device).
 
 ### Replace the CV or photo
 

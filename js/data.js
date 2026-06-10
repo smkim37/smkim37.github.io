@@ -66,7 +66,6 @@ const SITE = {
     },
     lab: {
       name: { en: "Visual Information Processing Lab", ko: "시각정보처리 연구실" },
-      url: "https://vip.snu.ac.kr",
     },
     university: { en: "Seoul National University", ko: "서울대학교" },
     email: "sumink@snu.ac.kr",
