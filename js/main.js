@@ -436,6 +436,17 @@
     });
   }
 
+  /* ---------- portrait flip (tap support for touch devices) ---------- */
+
+  function initFlip() {
+    const card = document.getElementById("portrait-flip");
+    if (card) {
+      card.addEventListener("click", function () {
+        card.classList.toggle("flipped");
+      });
+    }
+  }
+
   /* ---------- back-to-top ---------- */
 
   function initTopBtn() {
@@ -462,5 +473,6 @@
   initLang();
   initNav();
   initSpy();
+  initFlip();
   initTopBtn();
 })();

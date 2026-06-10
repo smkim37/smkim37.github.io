@@ -501,11 +501,62 @@ a {
   flex-shrink: 0;
 }
 
+/* Portrait flip card: photo on the front, signature on the back */
+.flip-card {
+  perspective: 1000px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.flip-card:hover .flip-inner,
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 14px;
+}
+
 .hero-portrait img {
+  display: block;
   width: 11.875rem; /* 190px at full scale */
   height: auto;
   border-radius: 14px;
   box-shadow: var(--shadow-lift);
+}
+
+.flip-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--name-grad-2));
+  box-shadow: var(--shadow-lift);
+}
+
+.signature {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  text-align: center;
+  color: #ffffff;
+  transform: rotate(-5deg);
+  user-select: none;
+}
+
+[data-theme="dark"] .signature {
+  color: #0f1719; /* bright teal back needs dark ink */
 }
 
 .bio {
@@ -992,9 +1043,12 @@ a {
     gap: var(--space-6);
   }
 
+  .hero-portrait .flip-card {
+    margin-inline: auto;
+  }
+
   .hero-portrait img {
     width: 9.375rem; /* 150px at full scale */
-    margin-inline: auto;
   }
 
   .hero-links {
