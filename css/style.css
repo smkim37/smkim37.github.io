@@ -669,11 +669,21 @@ a {
   color: var(--text-muted);
 }
 
+.edu-side {
+  text-align: right;
+  padding-top: 2px;
+}
+
 .edu-period {
   font-size: 0.85rem;
   color: var(--text-muted);
   white-space: nowrap;
-  padding-top: 2px;
+}
+
+.edu-loc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* ===== 05. Shared section styles ===== */
@@ -941,8 +951,20 @@ a {
   font-weight: 600;
 }
 
+.timeline-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .timeline-period {
   font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.timeline-loc {
+  font-size: 0.78rem;
   color: var(--text-muted);
   white-space: nowrap;
 }
@@ -1144,8 +1166,12 @@ a {
   }
 
   .row-date,
-  .edu-period {
+  .edu-side {
     text-align: left;
+  }
+
+  .timeline-side {
+    align-items: flex-start;
   }
 
   .back-to-top {

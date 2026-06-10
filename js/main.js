@@ -115,7 +115,9 @@
           '<div class="edu-degree">' + esc(t(e.degree)) + "</div>" +
           (e.note ? '<div class="edu-note">' + esc(t(e.note)) + "</div>" : "") +
           "</div>" +
-          '<div class="edu-period">' + esc(t(e.period)) + "</div>" +
+          '<div class="edu-side"><div class="edu-period">' + esc(t(e.period)) + "</div>" +
+          (e.location ? '<div class="edu-loc">' + esc(t(e.location)) + "</div>" : "") +
+          "</div>" +
           "</div>"
         );
       }).join("") +
@@ -189,12 +191,14 @@
       "</div>";
   }
 
-  function timelineItem(role, org, period, desc) {
+  function timelineItem(role, org, period, desc, location) {
     return (
       '<div class="timeline-item reveal">' +
       '<div class="timeline-head">' +
       '<span class="timeline-role">' + esc(role) + "</span>" +
-      '<span class="timeline-period">' + esc(period) + "</span>" +
+      '<span class="timeline-side"><span class="timeline-period">' + esc(period) + "</span>" +
+      (location ? '<span class="timeline-loc">' + esc(location) + "</span>" : "") +
+      "</span>" +
       "</div>" +
       '<div class="timeline-org">' + esc(org) + "</div>" +
       (desc ? '<p class="timeline-desc">' + esc(desc) + "</p>" : "") +
@@ -205,7 +209,7 @@
   function renderWorkExperience() {
     container("workExperience").innerHTML =
       SITE.experience.map(function (e) {
-        return timelineItem(t(e.role), t(e.org), t(e.period), t(e.desc));
+        return timelineItem(t(e.role), t(e.org), t(e.period), t(e.desc), e.location ? t(e.location) : null);
       }).join("");
   }
 

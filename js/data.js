@@ -107,6 +107,7 @@ const SITE = {
       school: { en: "Seoul National University", ko: "서울대학교" },
       degree: { en: "Integrated M.S./Ph.D. in Data Science", ko: "데이터사이언스 석박사통합과정" },
       period: { en: "Mar 2025 – Present", ko: "2025.03 – 현재" },
+      location: { en: "Seoul, South Korea", ko: "대한민국 서울" },
       note: {
         en: "Advisor: Prof. Joonseok Lee · Visual Information Processing Lab",
         ko: "지도교수: 이준석 · 시각정보처리 연구실",
@@ -116,6 +117,7 @@ const SITE = {
       school: { en: "Sungkyunkwan University", ko: "성균관대학교" },
       degree: { en: "B.S. in Applied Artificial Intelligence", ko: "인공지능융합 학사" },
       period: { en: "Mar 2020 – Feb 2025", ko: "2020.03 – 2025.02" },
+      location: { en: "Seoul, South Korea", ko: "대한민국 서울" },
       note: { en: "GPA 4.23/4.50 · Magna Cum Laude", ko: "GPA 4.23/4.50 · 우등 졸업" },
     },
   ],
@@ -237,6 +239,7 @@ const SITE = {
         ko: "한국과학기술연구원(KIST) AI·로봇연구소 인공지능연구센터",
       },
       period: { en: "Feb 2023 – Jun 2023", ko: "2023.02 – 2023.06" },
+      location: { en: "Seoul, South Korea", ko: "대한민국 서울" },
       desc: {
         en: "Investigated parameter-efficient model adaptation for temporal action localization, reducing trainable parameters while preserving localization performance, and analyzed the trade-off between adaptation efficiency and temporal localization accuracy on standard benchmarks.",
         ko: "시간적 행동 검출(temporal action localization)을 위한 파라미터 효율적 모델 적응 기법을 연구하여, 검출 성능을 유지하면서 학습 파라미터를 줄이고 적응 효율과 검출 정확도 간의 트레이드오프를 벤치마크에서 분석했습니다.",
