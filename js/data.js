@@ -316,7 +316,7 @@ const SITE = {
 
   awards: [
     {
-      name: { en: "Bronze Award, Industry-Academic-Linked AI Hackathon", ko: "동상, 산학연계 AI 해커톤" },
+      name: { en: "Excellence Award, Industry-Academic-Linked AI Hackathon", ko: "우수상, 산학연계 AI 해커톤" },
       org: { en: "AI Convergence and Open Sharing System (COSS)", ko: "AI 혁신공유대학 (COSS)" },
       year: { en: "Aug 2024", ko: "2024.08" },
     },
