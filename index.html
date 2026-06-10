@@ -15,19 +15,15 @@
   <meta property="og:image" content="https://smkim37.github.io/assets/suminkim_image.jpg" />
   <meta name="twitter:card" content="summary" />
 
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0f1719" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <meta name="google-site-verification" content="a_Fk26TIF_Of9Z_Ujj088J0DJX8oOsSEvED8lLiyr00" />
 
-  <!-- Apply saved theme before first paint (avoids dark-mode flash) -->
+  <!-- Apply saved theme before first paint (avoids dark-mode flash).
+       Light is the default for everyone; the OS color scheme is ignored. -->
   <script>
-    (function () {
-      var t = localStorage.getItem("theme");
-      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      document.documentElement.dataset.theme = t;
-    })();
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

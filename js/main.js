@@ -320,11 +320,21 @@
 
   /* ---------- theme toggle ---------- */
 
+  // Keep the browser-chrome color (mobile address bar) in sync with the theme.
+  function syncThemeColorMeta() {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.content = document.documentElement.dataset.theme === "dark" ? "#0f1719" : "#ffffff";
+    }
+  }
+
   function initTheme() {
+    syncThemeColorMeta(); // a saved dark preference is applied before this script runs
     document.getElementById("theme-toggle").addEventListener("click", function () {
       const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
       document.documentElement.dataset.theme = next;
       localStorage.setItem("theme", next);
+      syncThemeColorMeta();
     });
   }
 
