@@ -995,14 +995,13 @@ a {
 
 .row-note {
   display: inline-block;
-  margin-left: var(--space-2);
+  margin-top: 0.3rem;
   padding: 0.1rem 0.5rem;
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 600;
   background: var(--accent-soft);
   color: var(--accent-soft-text);
-  vertical-align: middle;
 }
 
 .row-date {

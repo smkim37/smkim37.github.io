@@ -223,8 +223,8 @@
         return (
           '<div class="row">' +
           '<div class="row-main"><span class="row-title">' + esc(r.title) + "</span>" +
-          (r.note ? '<span class="row-note">' + esc(r.note) + "</span>" : "") +
           (r.sub ? '<div class="row-sub">' + esc(r.sub) + "</div>" : "") +
+          (r.note ? '<div><span class="row-note">' + esc(r.note) + "</span></div>" : "") +
           "</div>" +
           '<div class="row-date">' + esc(r.date) + "</div>" +
           "</div>"
