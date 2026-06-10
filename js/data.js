@@ -22,38 +22,35 @@ const SITE = {
   /* ---------- UI labels (nav + section/sub-section titles) ---------- */
   ui: {
     nav: {
-      about:        { en: "About",           ko: "소개" },
-      news:         { en: "News",            ko: "소식" },
-      publications: { en: "Publications",    ko: "논문" },
-      experience:   { en: "Experience",      ko: "경력" },
-      awards:       { en: "Awards",          ko: "수상" },
-      misc:         { en: "Talks & Service", ko: "발표·활동" },
+      about:          { en: "About",             ko: "소개" },
+      news:           { en: "News",              ko: "소식" },
+      education:      { en: "Education",         ko: "학력" },
+      publications:   { en: "Publications",      ko: "논문" },
+      patents:        { en: "Patents",           ko: "특허" },
+      workExperience: { en: "Work Experience",   ko: "경력" },
+      projects:       { en: "Projects",          ko: "연구 과제" },
+      fellowships:    { en: "Fellowships",       ko: "펠로우십·장학금" },
+      awards:         { en: "Awards",            ko: "수상" },
+      talks:          { en: "Talks",             ko: "초청 발표" },
+      teaching:       { en: "Teaching",          ko: "강의" },
+      services:       { en: "Academic Services", ko: "학술 활동" },
+      activities:     { en: "Activities",        ko: "대외 활동" },
     },
     labels: {
       skipLink:    { en: "Skip to content",            ko: "본문 바로가기" },
       heroEyebrow: { en: "Hello, I am",                ko: "안녕하세요," },
       cvButton:    { en: "CV",                         ko: "이력서" },
+      tocTitle:    { en: "Contents",                   ko: "목차" },
       interests:   { en: "Research Interests",         ko: "연구 분야" },
-      educationT:  { en: "Education",                  ko: "학력" },
       conference:  { en: "Conference Papers",          ko: "학회 논문" },
       preprints:   { en: "Preprints",                  ko: "프리프린트" },
-      patents:     { en: "Patents",                    ko: "특허" },
-      workExp:     { en: "Research Experience",        ko: "연구 경력" },
-      projects:    { en: "Research Projects",          ko: "연구 과제" },
-      fellowships: { en: "Fellowships & Scholarships", ko: "펠로우십·장학금" },
-      honors:      { en: "Honors & Awards",            ko: "수상 내역" },
-      talks:       { en: "Invited Talks",              ko: "초청 발표" },
-      teaching:    { en: "Teaching",                   ko: "강의" },
-      service:     { en: "Academic Service",           ko: "학술 활동" },
-      activities:  { en: "Activities",                 ko: "대외 활동" },
       eqContrib:   { en: "* equal contribution",       ko: "* 공동 1저자" },
       corresp:     { en: "† corresponding author",     ko: "† 교신저자" },
       inventors:   { en: "Inventors",                  ko: "발명자" },
-      advisorTag:  { en: "Advisor",                    ko: "지도교수" },
       backToTop:   { en: "Back to top",                ko: "맨 위로" },
       themeToggle: { en: "Toggle dark mode",           ko: "다크 모드 전환" },
       langToggle:  { en: "한국어로 보기",               ko: "View in English" },
-      langButton:  { en: "한국어",                      ko: "EN" },
+      langButton:  { en: "KO",                         ko: "EN" },
       menuOpen:    { en: "Open menu",                  ko: "메뉴 열기" },
       menuClose:   { en: "Close menu",                 ko: "메뉴 닫기" },
     },
@@ -77,6 +74,7 @@ const SITE = {
       url: "http://www.joonseok.net/home.html",
     },
     email: "sumink@snu.ac.kr",
+    emailDisplay: "sumink [at] snu.ac.kr", // spam-safe display form
     location: { en: "Seoul, South Korea", ko: "대한민국 서울" },
     bio: {
       en: "I am a second-year Integrated MS/PhD student at Seoul National University, advised by Professor Joonseok Lee at the Visual Information Processing Lab. My research focuses on computer vision, video understanding, and multimodal learning, with an emphasis on learning spatiotemporal video representations for effective perception and reasoning over multimodal signals.",
@@ -94,9 +92,9 @@ const SITE = {
     },
     links: [
       { icon: "email",    label: "Email",          url: "mailto:sumink@snu.ac.kr" },
-      { icon: "scholar",  label: "Google Scholar", url: "https://scholar.google.com/citations?user=-CnUimcAAAAJ" },
-      { icon: "github",   label: "GitHub",         url: "https://github.com/smkim37" },
       { icon: "linkedin", label: "LinkedIn",       url: "https://www.linkedin.com/in/smkim37" },
+      { icon: "github",   label: "GitHub",         url: "https://github.com/smkim37" },
+      { icon: "scholar",  label: "Google Scholar", url: "https://scholar.google.com/citations?user=-CnUimcAAAAJ" },
       { icon: "cv",       label: "CV",             url: "assets/suminkim_cv.pdf" },
     ],
   },
@@ -471,7 +469,13 @@ const SITE = {
   service: [
     {
       role: { en: "Reviewer", ko: "리뷰어" },
-      detail: "NeurIPS 2026 · ICML 2026",
+      detail: "Conference on Neural Information Processing Systems (NeurIPS)",
+      year: "2026",
+    },
+    {
+      role: { en: "Reviewer", ko: "리뷰어" },
+      detail: "International Conference on Machine Learning (ICML)",
+      year: "2026",
     },
   ],
 
@@ -504,9 +508,13 @@ const SITE = {
   ],
 
   footer: {
-    note: {
-      en: "© 2026 Sumin Kim · Built with plain HTML, CSS, and JavaScript.",
-      ko: "© 2026 김수민 · HTML, CSS, JavaScript로 만들었습니다.",
+    copyright: {
+      en: "© 2026 Sumin Kim. All rights reserved.",
+      ko: "© 2026 김수민. All rights reserved.",
+    },
+    sub: {
+      en: "Visual Information Processing Lab, Seoul National University · Last updated June 2026",
+      ko: "서울대학교 시각정보처리 연구실 · 2026년 6월 업데이트",
     },
   },
 };

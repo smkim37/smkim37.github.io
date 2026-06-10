@@ -84,23 +84,30 @@
       esc(t(p.lab.name)) + "</a>, " + esc(t(p.university)) + "</span>" +
       '<span class="affil-line">' + esc(t(p.advisor.prefix)) + " " +
       '<a href="' + esc(p.advisor.url) + '" target="_blank" rel="noopener">' +
-      esc(t(p.advisor.name)) + "</a> · " + esc(t(p.location)) + "</span>";
+      esc(t(p.advisor.name)) + "</a></span>" +
+      '<span class="affil-line">' + esc(t(p.location)) +
+      ' · <span class="affil-email">' + esc(p.emailDisplay) + "</span></span>";
     container("heroLinks").innerHTML = profileChips(p.links);
     container("bio").textContent = t(p.bio);
 
+    const tagRow = function (items, cls) {
+      return (
+        '<div class="tag-list">' +
+        items.map(function (x) {
+          return '<span class="tag' + (cls ? " " + cls : "") + '">' + esc(x) + "</span>";
+        }).join("") +
+        "</div>"
+      );
+    };
     container("interests").innerHTML =
       '<h3 class="interests-label">' + esc(label("interests")) + "</h3>" +
-      '<div class="tag-list">' +
-      t(SITE.profile.interests.broad).map(function (x) {
-        return '<span class="tag">' + esc(x) + "</span>";
-      }).join("") +
-      t(SITE.profile.interests.topics).map(function (x) {
-        return '<span class="tag tag--sub">' + esc(x) + "</span>";
-      }).join("") +
-      "</div>";
+      tagRow(t(SITE.profile.interests.broad), "") +
+      tagRow(t(SITE.profile.interests.topics), "tag--sub");
+  }
 
+  function renderEducation() {
     container("education").innerHTML =
-      '<h3 class="edu-label">' + esc(label("educationT")) + "</h3>" +
+      '<div class="reveal">' +
       SITE.education.map(function (e) {
         return (
           '<div class="edu-item">' +
@@ -111,7 +118,8 @@
           '<div class="edu-period">' + esc(t(e.period)) + "</div>" +
           "</div>"
         );
-      }).join("");
+      }).join("") +
+      "</div>";
   }
 
   function renderNews() {
@@ -156,10 +164,13 @@
     container("publications").innerHTML =
       '<h3 class="subsection-title reveal">' + esc(label("conference")) + "</h3>" +
       conf.map(pubCard).join("") +
-      '<p class="pub-legend reveal">' + esc(label("eqContrib")) + " · " + esc(label("corresp")) + "</p>" +
       '<h3 class="subsection-title reveal">' + esc(label("preprints")) + "</h3>" +
       pre.map(pubCard).join("") +
-      '<h3 class="subsection-title reveal">' + esc(label("patents")) + "</h3>" +
+      '<p class="pub-legend reveal">' + esc(label("eqContrib")) + " · " + esc(label("corresp")) + "</p>";
+  }
+
+  function renderPatents() {
+    container("patents").innerHTML =
       '<div class="reveal">' +
       SITE.patents.map(function (pt) {
         return (
@@ -186,15 +197,17 @@
     );
   }
 
-  function renderExperience() {
-    container("experience").innerHTML =
-      '<h3 class="subsection-title reveal">' + esc(label("projects")) + "</h3>" +
-      SITE.projects.map(function (p) {
-        return timelineItem(t(p.name), t(p.sponsor), t(p.period), t(p.desc));
-      }).join("") +
-      '<h3 class="subsection-title reveal">' + esc(label("workExp")) + "</h3>" +
+  function renderWorkExperience() {
+    container("workExperience").innerHTML =
       SITE.experience.map(function (e) {
         return timelineItem(t(e.role), t(e.org), t(e.period), t(e.desc));
+      }).join("");
+  }
+
+  function renderProjects() {
+    container("projects").innerHTML =
+      SITE.projects.map(function (p) {
+        return timelineItem(t(p.name), t(p.sponsor), t(p.period), t(p.desc));
       }).join("");
   }
 
@@ -216,33 +229,43 @@
     );
   }
 
-  function renderAwards() {
-    container("awards").innerHTML =
-      '<h3 class="subsection-title reveal">' + esc(label("fellowships")) + "</h3>" +
+  function renderFellowships() {
+    container("fellowships").innerHTML =
       rowList(SITE.fellowships.map(function (f) {
         return { title: t(f.name), sub: t(f.org), date: t(f.year), note: f.note ? t(f.note) : null };
-      })) +
-      '<h3 class="subsection-title reveal">' + esc(label("honors")) + "</h3>" +
+      }));
+  }
+
+  function renderAwards() {
+    container("awards").innerHTML =
       rowList(SITE.awards.map(function (a) {
         return { title: t(a.name), sub: t(a.org), date: t(a.year) };
       }));
   }
 
-  function renderMisc() {
-    container("misc").innerHTML =
-      '<h3 class="subsection-title reveal">' + esc(label("talks")) + "</h3>" +
+  function renderTalks() {
+    container("talks").innerHTML =
       rowList(SITE.talks.map(function (tk) {
         return { title: t(tk.title), sub: t(tk.venue), date: t(tk.date) };
-      })) +
-      '<h3 class="subsection-title reveal">' + esc(label("teaching")) + "</h3>" +
+      }));
+  }
+
+  function renderTeaching() {
+    container("teaching").innerHTML =
       rowList(SITE.teaching.map(function (c) {
         return { title: t(c.course), sub: t(c.school), date: t(c.term) };
-      })) +
-      '<h3 class="subsection-title reveal">' + esc(label("service")) + "</h3>" +
+      }));
+  }
+
+  function renderServices() {
+    container("services").innerHTML =
       rowList(SITE.service.map(function (s) {
-        return { title: t(s.role), sub: s.detail, date: "" };
-      })) +
-      '<h3 class="subsection-title reveal">' + esc(label("activities")) + "</h3>" +
+        return { title: t(s.role), sub: s.detail, date: s.year || "" };
+      }));
+  }
+
+  function renderActivities() {
+    container("activities").innerHTML =
       rowList(SITE.activities.map(function (a) {
         return { title: t(a.role), sub: t(a.org), date: t(a.period) };
       }));
@@ -250,7 +273,8 @@
 
   function renderFooter() {
     container("footerLinks").innerHTML = profileChips(SITE.profile.links);
-    container("footerNote").textContent = t(SITE.footer.note);
+    container("footerCopyright").textContent = t(SITE.footer.copyright);
+    container("footerSub").textContent = t(SITE.footer.sub);
   }
 
   function renderAll() {
@@ -265,10 +289,17 @@
 
     renderHero();
     renderNews();
+    renderEducation();
     renderPublications();
-    renderExperience();
+    renderPatents();
+    renderWorkExperience();
+    renderProjects();
+    renderFellowships();
     renderAwards();
-    renderMisc();
+    renderTalks();
+    renderTeaching();
+    renderServices();
+    renderActivities();
     renderFooter();
 
     // Localized aria-labels / button text
@@ -338,23 +369,30 @@
   /* ---------- scrollspy ---------- */
 
   function initSpy() {
+    // id -> [toc link, mobile menu link]
     const links = {};
-    header.querySelectorAll('.site-nav a[href^="#"]').forEach(function (a) {
-      links[a.getAttribute("href").slice(1)] = a;
+    document.querySelectorAll('.toc a[href^="#"], .site-nav a[href^="#"]').forEach(function (a) {
+      const id = a.getAttribute("href").slice(1);
+      (links[id] = links[id] || []).push(a);
     });
+    const all = Object.keys(links).reduce(function (acc, k) {
+      return acc.concat(links[k]);
+    }, []);
 
     const spy = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting && links[entry.target.id]) {
-            Object.keys(links).forEach(function (k) {
-              links[k].classList.remove("active");
+            all.forEach(function (a) {
+              a.classList.remove("active");
             });
-            links[entry.target.id].classList.add("active");
+            links[entry.target.id].forEach(function (a) {
+              a.classList.add("active");
+            });
           }
         });
       },
-      { rootMargin: "-20% 0px -70% 0px" }
+      { rootMargin: "-15% 0px -75% 0px" }
     );
 
     document.querySelectorAll("main section[id]").forEach(function (s) {

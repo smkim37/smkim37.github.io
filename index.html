@@ -62,19 +62,31 @@
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="Sumin Kim — home">Sumin&nbsp;Kim</a>
 
+      <!-- Compact dropdown menu (shown below the TOC breakpoint) -->
       <nav class="site-nav" aria-label="Main">
         <ul>
           <li><a href="#about" data-i18n="nav.about">About</a></li>
           <li><a href="#news" data-i18n="nav.news">News</a></li>
+          <li><a href="#education" data-i18n="nav.education">Education</a></li>
           <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
-          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#patents" data-i18n="nav.patents">Patents</a></li>
+          <li><a href="#work-experience" data-i18n="nav.workExperience">Work Experience</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#fellowships" data-i18n="nav.fellowships">Fellowships</a></li>
           <li><a href="#awards" data-i18n="nav.awards">Awards</a></li>
-          <li><a href="#misc" data-i18n="nav.misc">Talks &amp; Service</a></li>
+          <li><a href="#talks" data-i18n="nav.talks">Talks</a></li>
+          <li><a href="#teaching" data-i18n="nav.teaching">Teaching</a></li>
+          <li><a href="#services" data-i18n="nav.services">Academic Services</a></li>
+          <li><a href="#activities" data-i18n="nav.activities">Activities</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button id="lang-toggle" class="icon-btn lang-btn" type="button" aria-label="한국어로 보기">한국어</button>
+        <a id="cv-button" class="icon-btn cv-btn" href="assets/suminkim_cv.pdf" target="_blank" rel="noopener">
+          <svg aria-hidden="true" width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/><path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/></svg>
+          <span data-i18n="labels.cvButton">CV</span>
+        </a>
+        <button id="lang-toggle" class="icon-btn lang-btn" type="button" aria-label="한국어로 보기">KO</button>
         <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle dark mode">
           <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
           <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
@@ -85,6 +97,25 @@
       </div>
     </div>
   </header>
+
+  <!-- Right-rail table of contents (wide screens only) -->
+  <aside class="toc" aria-label="Table of contents">
+    <p class="toc-title" data-i18n="labels.tocTitle">Contents</p>
+    <ul>
+      <li><a href="#news" data-i18n="nav.news">News</a></li>
+      <li><a href="#education" data-i18n="nav.education">Education</a></li>
+      <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
+      <li><a href="#patents" data-i18n="nav.patents">Patents</a></li>
+      <li><a href="#work-experience" data-i18n="nav.workExperience">Work Experience</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#fellowships" data-i18n="nav.fellowships">Fellowships</a></li>
+      <li><a href="#awards" data-i18n="nav.awards">Awards</a></li>
+      <li><a href="#talks" data-i18n="nav.talks">Talks</a></li>
+      <li><a href="#teaching" data-i18n="nav.teaching">Teaching</a></li>
+      <li><a href="#services" data-i18n="nav.services">Academic Services</a></li>
+      <li><a href="#activities" data-i18n="nav.activities">Activities</a></li>
+    </ul>
+  </aside>
 
   <main id="top">
     <noscript>
@@ -115,7 +146,6 @@
       <div class="about-body reveal">
         <p class="bio" data-render="bio"></p>
         <div class="interests" data-render="interests"></div>
-        <div class="education" data-render="education"></div>
       </div>
     </section>
 
@@ -125,35 +155,78 @@
       <div data-render="news"></div>
     </section>
 
+    <!-- ===== Education ===== -->
+    <section id="education" aria-labelledby="education-heading" class="section">
+      <h2 id="education-heading" class="section-title reveal" data-i18n="nav.education">Education</h2>
+      <div data-render="education"></div>
+    </section>
+
     <!-- ===== Publications ===== -->
     <section id="publications" aria-labelledby="publications-heading" class="section">
       <h2 id="publications-heading" class="section-title reveal" data-i18n="nav.publications">Publications</h2>
       <div data-render="publications"></div>
     </section>
 
-    <!-- ===== Experience & Projects ===== -->
-    <section id="experience" aria-labelledby="experience-heading" class="section">
-      <h2 id="experience-heading" class="section-title reveal" data-i18n="nav.experience">Experience</h2>
-      <div data-render="experience"></div>
+    <!-- ===== Patents ===== -->
+    <section id="patents" aria-labelledby="patents-heading" class="section">
+      <h2 id="patents-heading" class="section-title reveal" data-i18n="nav.patents">Patents</h2>
+      <div data-render="patents"></div>
     </section>
 
-    <!-- ===== Awards & Fellowships ===== -->
+    <!-- ===== Work Experience ===== -->
+    <section id="work-experience" aria-labelledby="work-experience-heading" class="section">
+      <h2 id="work-experience-heading" class="section-title reveal" data-i18n="nav.workExperience">Work Experience</h2>
+      <div data-render="workExperience"></div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" aria-labelledby="projects-heading" class="section">
+      <h2 id="projects-heading" class="section-title reveal" data-i18n="nav.projects">Projects</h2>
+      <div data-render="projects"></div>
+    </section>
+
+    <!-- ===== Fellowships ===== -->
+    <section id="fellowships" aria-labelledby="fellowships-heading" class="section">
+      <h2 id="fellowships-heading" class="section-title reveal" data-i18n="nav.fellowships">Fellowships</h2>
+      <div data-render="fellowships"></div>
+    </section>
+
+    <!-- ===== Awards ===== -->
     <section id="awards" aria-labelledby="awards-heading" class="section">
       <h2 id="awards-heading" class="section-title reveal" data-i18n="nav.awards">Awards</h2>
       <div data-render="awards"></div>
     </section>
 
-    <!-- ===== Talks, Teaching & Service ===== -->
-    <section id="misc" aria-labelledby="misc-heading" class="section">
-      <h2 id="misc-heading" class="section-title reveal" data-i18n="nav.misc">Talks &amp; Service</h2>
-      <div data-render="misc"></div>
+    <!-- ===== Talks ===== -->
+    <section id="talks" aria-labelledby="talks-heading" class="section">
+      <h2 id="talks-heading" class="section-title reveal" data-i18n="nav.talks">Talks</h2>
+      <div data-render="talks"></div>
+    </section>
+
+    <!-- ===== Teaching ===== -->
+    <section id="teaching" aria-labelledby="teaching-heading" class="section">
+      <h2 id="teaching-heading" class="section-title reveal" data-i18n="nav.teaching">Teaching</h2>
+      <div data-render="teaching"></div>
+    </section>
+
+    <!-- ===== Academic Services ===== -->
+    <section id="services" aria-labelledby="services-heading" class="section">
+      <h2 id="services-heading" class="section-title reveal" data-i18n="nav.services">Academic Services</h2>
+      <div data-render="services"></div>
+    </section>
+
+    <!-- ===== Activities ===== -->
+    <section id="activities" aria-labelledby="activities-heading" class="section">
+      <h2 id="activities-heading" class="section-title reveal" data-i18n="nav.activities">Activities</h2>
+      <div data-render="activities"></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-links" data-render="footerLinks"></div>
-      <p class="footer-note" data-render="footerNote"></p>
+      <p class="footer-copyright" data-render="footerCopyright"></p>
+      <p class="footer-sub" data-render="footerSub"></p>
     </div>
   </footer>
 
