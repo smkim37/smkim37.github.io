@@ -457,10 +457,21 @@
 
   function initFlip() {
     const card = document.getElementById("portrait-flip");
-    if (card) {
-      card.addEventListener("click", function () {
-        card.classList.toggle("flipped");
-      });
+    if (!card) return;
+    const inner = card.querySelector(".flip-inner");
+    let angle = 0;
+    const flip = function () {
+      angle += 180; // always accumulate in the same direction (rightward)
+      inner.style.transform = "rotateY(" + angle + "deg)";
+    };
+
+    if (window.matchMedia("(hover: hover)").matches) {
+      // desktop: cursor enter flips to the back, leaving spins onward to the front
+      card.addEventListener("mouseenter", flip);
+      card.addEventListener("mouseleave", flip);
+    } else {
+      // touch: each tap turns one more face in the same direction
+      card.addEventListener("click", flip);
     }
   }
 

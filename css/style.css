@@ -508,17 +508,9 @@ a {
   transition: transform 0.6s ease;
 }
 
-/* Hover-flip only on devices with a real pointer — on touch screens a
-   tap leaves :hover "stuck", which kept the card from flipping back */
-@media (hover: hover) {
-  .flip-card:hover .flip-inner {
-    transform: rotateY(180deg);
-  }
-}
-
-.flip-card.flipped .flip-inner {
-  transform: rotateY(180deg);
-}
+/* Rotation is driven by JS (see initFlip) so the card always spins the
+   same direction (rightward) on both flip and flip-back, instead of
+   reversing the way a CSS :hover toggle would. */
 
 .flip-front,
 .flip-back {
