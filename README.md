@@ -2,7 +2,8 @@
 
 Personal academic homepage of **Sumin Kim** — plain HTML/CSS/JS, no build step.
 Pushing to the `main` branch of the `smkim37/smkim37.github.io` repo deploys it
-automatically via GitHub Pages at <https://smkim37.github.io>.
+automatically via GitHub Pages at <https://sumin-kim.com>
+(also reachable at <https://smkim37.github.io>).
 
 ## How to update content
 
