@@ -265,7 +265,7 @@
   function renderServices() {
     container("services").innerHTML =
       rowList(SITE.service.map(function (s) {
-        return { title: t(s.role), sub: s.detail, date: s.year || "" };
+        return { title: s.detail, sub: t(s.role), date: s.year || "" };
       }));
   }
 
