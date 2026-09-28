@@ -143,7 +143,7 @@
     return (
       '<article class="pub-card reveal" style="transition-delay:' + Math.min(i * 60, 200) + 'ms">' +
       (p.id ? '<span class="pub-id" aria-hidden="true">' + esc(p.id) + "</span>" : "") +
-      '<h4 class="pub-title">' + esc(p.title) + "</h4>" +
+      '<h3 class="pub-title">' + esc(p.title) + "</h3>" +
       '<p class="pub-authors">' + boldMyName(p.authors) + "</p>" +
       '<p class="pub-venue">' + esc(t(p.venue)) + "</p>" +
       (p.venueTag || p.award
@@ -165,15 +165,9 @@
   }
 
   function renderPublications() {
-    const conf = SITE.publications.filter(function (p) { return p.type === "conference"; });
-    const pre = SITE.publications.filter(function (p) { return p.type === "preprint"; });
-
     container("publications").innerHTML =
-      '<h3 class="subsection-title reveal">' + esc(label("conference")) + "</h3>" +
-      conf.map(pubCard).join("") +
-      '<h3 class="subsection-title reveal">' + esc(label("preprints")) + "</h3>" +
-      pre.map(pubCard).join("") +
-      '<p class="pub-legend reveal">' + esc(label("eqContrib")) + " · " + esc(label("corresp")) + "</p>";
+      '<p class="pub-legend reveal">' + esc(label("eqContrib")) + " · " + esc(label("corresp")) + "</p>" +
+      SITE.publications.map(pubCard).join("");
   }
 
   function renderPatents() {

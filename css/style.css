@@ -769,7 +769,7 @@ a {
   border-left-color: var(--accent);
 }
 
-/* Small circular C1/C2/P1/P2 marker in the top-right corner */
+/* Small circular publication marker in the top-right corner */
 .pub-id {
   position: absolute;
   top: 0.6rem;
@@ -875,7 +875,7 @@ a {
 .pub-legend {
   font-size: 0.8rem;
   color: var(--text-muted);
-  margin: var(--space-2) 0 0;
+  margin: 0 0 var(--space-4);
 }
 
 .patent-item {

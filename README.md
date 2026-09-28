@@ -48,12 +48,11 @@ Copy a block at the top of the `publications` array:
 
 ```js
 {
-  id: "C3", // shown in the circle at the card's top-right corner
-  type: "conference", // or "preprint" — controls which subsection it appears in
+  id: "C4", // shown in the circle at the card's top-right corner
   title: "Paper Title Stays in English",
   authors: "Sumin Kim*, Coauthor Name†, ...", // your name is bolded automatically
   venue: "Conference on Neural Information Processing Systems (NeurIPS), 2026",
-  venueTag: "NeurIPS 2026", // solid badge next to the venue; omit for preprints
+  venueTag: "NeurIPS 2026", // solid badge next to the venue
   award: { en: "Oral Presentation", ko: "구두 발표" }, // or null
   links: [
     { label: "Paper", url: "https://..." },
@@ -80,8 +79,10 @@ each array is commented in `js/data.js`. Notes:
 ### Replace the CV or photo
 
 Drop the new file into `assets/` with the same filename
-(`suminkim_cv.pdf` / `suminkim_image.jpg`), or change the paths in
-`SITE.config` in `js/data.js`.
+(`suminkim_cv.pdf` / `suminkim_image.jpg`). When updating the CV, refresh the
+`?v=YYYYMMDD` version in `SITE.config.cv`, the profile CV link in `js/data.js`,
+and the header and noscript CV links in `index.html` so visitors load the
+latest PDF. Update these same paths if the CV filename changes.
 
 ## Preview locally
 

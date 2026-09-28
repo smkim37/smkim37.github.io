@@ -16,7 +16,7 @@ const SITE = {
     siteUrl: "https://smkim37.github.io",
     myName: "Sumin Kim", // bolded automatically in author lists
     portrait: "assets/suminkim_image.jpg",
-    cv: "assets/suminkim_cv.pdf",
+    cv: "assets/suminkim_cv.pdf?v=20260928",
   },
 
   /* ---------- UI labels (nav + section/sub-section titles) ---------- */
@@ -42,8 +42,6 @@ const SITE = {
       cvButton:    { en: "CV",                         ko: "이력서" },
       tocTitle:    { en: "Contents",                   ko: "목차" },
       interests:   { en: "Research Interests",         ko: "연구 분야" },
-      conference:  { en: "Conference Papers",          ko: "학회 논문" },
-      preprints:   { en: "Preprints",                  ko: "프리프린트" },
       eqContrib:   { en: "* equal contribution",       ko: "* 공동 1저자" },
       corresp:     { en: "† corresponding author",     ko: "† 교신저자" },
       inventors:   { en: "Inventors",                  ko: "발명자" },
@@ -84,12 +82,12 @@ const SITE = {
     ],
     interests: {
       broad: {
-        en: ["Video Understanding", "Representation Learning", "Multimodal Learning"],
-        ko: ["비디오 이해", "표현 학습", "멀티모달 학습"],
+        en: ["Video Understanding", "Multimodal Learning", "Representation Learning"],
+        ko: ["비디오 이해", "멀티모달 학습", "표현 학습"],
       },
       topics: {
-        en: ["Video Summarization", "Highlight Detection", "Video Object Segmentation", "Moment Retrieval"],
-        ko: ["비디오 요약", "하이라이트 검출", "비디오 객체 분할", "모먼트 검색"],
+        en: ["Computer Vision", "Deep Learning"],
+        ko: ["컴퓨터 비전", "딥러닝"],
       },
     },
     links: [
@@ -97,7 +95,7 @@ const SITE = {
       { icon: "linkedin", label: "LinkedIn",       url: "https://www.linkedin.com/in/smkim37" },
       { icon: "github",   label: "GitHub",         url: "https://github.com/smkim37" },
       { icon: "scholar",  label: "Google Scholar", url: "https://scholar.google.com/citations?user=-CnUimcAAAAJ" },
-      { icon: "cv",       label: "CV",             url: "assets/suminkim_cv.pdf" },
+      { icon: "cv",       label: "CV",             url: "assets/suminkim_cv.pdf?v=20260928" },
     ],
   },
 
@@ -125,6 +123,13 @@ const SITE = {
    * Keep this list focused: program admissions, paper acceptances,
    * and reviewer service only. ---------- */
   news: [
+    {
+      date: { en: "Sep 2026", ko: "2026.09" },
+      text: {
+        en: "Serving as a reviewer for ICLR 2027.",
+        ko: "ICLR 2027 리뷰어로 활동하고 있습니다.",
+      },
+    },
     {
       date: { en: "Jan 2026", ko: "2026.01" },
       highlight: true,
@@ -160,8 +165,16 @@ const SITE = {
   /* ---------- Publications ---------- */
   publications: [
     {
+      id: "C3",
+      title: "From Matching to Reasoning: Query-Aware Long Video Summarization",
+      authors: "Mingu Kang, Sumin Kim, Hyunjin Lee, Sungmin Yang, Yoori Oh†, and Joonseok Lee†",
+      venue: "Conference on Neural Information Processing Systems, 2026",
+      venueTag: "NeurIPS 2026",
+      award: null,
+      links: [],
+    },
+    {
       id: "C2",
-      type: "conference",
       title: "TripleSumm: Adaptive Triple-Modality Fusion for Video Summarization",
       authors: "Sumin Kim*, Hyemin Jeong*, Mingu Kang*, Yejin Kim, Yoori Oh†, and Joonseok Lee†",
       venue: "International Conference on Learning Representations, 2026",
@@ -177,36 +190,17 @@ const SITE = {
     },
     {
       id: "C1",
-      type: "conference",
       title: "SummDiff: Generative Modeling of Video Summarization with Diffusion",
       authors: "Kwanseok Kim*, Jaehoon Hahm*, Sumin Kim, Jinhwan Sul, Byunghak Kim, and Joonseok Lee†",
       venue: "International Conference on Computer Vision, 2025",
       venueTag: "ICCV 2025",
-      award: { en: "Highlight Presentation (top 2.34%)", ko: "Highlight 발표 (상위 2.34%)" },
+      award: { en: "Highlight Presentation (263/11,239 = 2.34%)", ko: "Highlight 발표 (263/11,239 = 2.34%)" },
       links: [
         { label: "Paper",   url: "https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_SummDiff_Generative_Modeling_of_Video_Summarization_with_Diffusion_ICCV_2025_paper.pdf" },
         { label: "arXiv",   url: "https://arxiv.org/abs/2510.08458" },
         { label: "Website", url: "https://jaehoon-hahm.github.io/summdiff-page" },
         { label: "Code",    url: "https://github.com/Kwanseok-K/SummDiff" },
       ],
-    },
-    {
-      id: "P2",
-      type: "preprint",
-      title: "Do Not Stop at Frame Scoring: Enabling End-to-end Training for Video Summarization",
-      authors: "Sumin Kim*, Mingu Kang*, Minjun Kim, Sungmin Yang, U Kang, Jaegul Choo†, Yoori Oh†, and Joonseok Lee†",
-      venue: { en: "Under review, 2026", ko: "심사 중, 2026" },
-      award: null,
-      links: [],
-    },
-    {
-      id: "P1",
-      type: "preprint",
-      title: "From Matching to Reasoning: Query-Aware Long Video Summarization",
-      authors: "Mingu Kang, Sumin Kim, Hyunjin Lee, Sungmin Yang, Yoori Oh†, and Joonseok Lee†",
-      venue: { en: "Under review, 2026", ko: "심사 중, 2026" },
-      award: null,
-      links: [],
     },
   ],
 
@@ -232,16 +226,16 @@ const SITE = {
   /* ---------- Experience & Projects ---------- */
   experience: [
     {
-      role: { en: "Research Intern", ko: "연구 인턴" },
+      role: { en: "Undergraduate Researcher", ko: "학부 연구생" },
       org: {
-        en: "Center for Artificial Intelligence, AI & Robotics Institute, KIST",
+        en: "Center for Artificial Intelligence, AI & Robotics Institute, Korea Institute of Science and Technology (KIST)",
         ko: "한국과학기술연구원(KIST) AI·로봇연구소 인공지능연구센터",
       },
       period: { en: "Feb 2023 – Jun 2023", ko: "2023.02 – 2023.06" },
       location: { en: "Seoul, South Korea", ko: "대한민국 서울" },
       desc: {
-        en: "Investigated parameter-efficient model adaptation for temporal action localization, reducing trainable parameters while preserving localization performance, and analyzed the trade-off between adaptation efficiency and temporal localization accuracy on standard benchmarks.",
-        ko: "시간적 행동 검출(temporal action localization)을 위한 파라미터 효율적 모델 적응 기법을 연구하여, 검출 성능을 유지하면서 학습 파라미터를 줄이고 적응 효율과 검출 정확도 간의 트레이드오프를 벤치마크에서 분석했습니다.",
+        en: "Investigated parameter-efficient adaptation for video understanding, balancing efficiency and model performance.",
+        ko: "비디오 이해를 위한 파라미터 효율적 적응 기법을 연구하며, 효율성과 모델 성능 간의 균형을 맞췄습니다.",
       },
     },
   ],
@@ -271,8 +265,8 @@ const SITE = {
   fellowships: [
     {
       name: { en: "NRF Graduate Research Encouragement Grant", ko: "석사과정생 연구장려금" },
-      org: { en: "National Research Foundation of Korea", ko: "한국연구재단" },
-      year: { en: "Sep 2025", ko: "2025.09" },
+      org: { en: "National Research Foundation of Korea (NRF)", ko: "한국연구재단 (NRF)" },
+      year: { en: "Sep 2025 – Aug 2026", ko: "2025.09 – 2026.08" },
       note: null,
     },
     {
@@ -282,10 +276,10 @@ const SITE = {
       note: null,
     },
     {
-      name: { en: "Presidential Science Scholarship (Engineering)", ko: "대통령과학장학금 (공학)" },
+      name: { en: "Presidential Science Scholarship, Engineering", ko: "대통령과학장학금 (공학)" },
       org: { en: "Korea Student Aid Foundation", ko: "한국장학재단" },
       year: { en: "Mar 2023 – Feb 2025", ko: "2023.03 – 2025.02" },
-      note: { en: "National merit-based scholarship — one of 60 national scholars", ko: "국가 우수 장학금 — 전국 60명 선발" },
+      note: { en: "National merit-based scholarship; selected as one of 60 national scholars", ko: "국가 우수 장학금 — 전국 60명 선발" },
     },
     {
       name: { en: "Student Success Leader Scholarship", ko: "학생성공 리더 장학금" },
@@ -375,28 +369,38 @@ const SITE = {
   /* ---------- Talks, Teaching, Service, Activities ---------- */
   talks: [
     {
+      title: { en: "“Practical Workshop on AI Agent-Based SDD (40 Hours)”", ko: "“AI 에이전트 기반 SDD 실습 워크숍 (40시간)”" },
+      venue: { en: "Hanwha Systems", ko: "한화시스템" },
+      date: { en: "Aug 2026", ko: "2026.08" },
+    },
+    {
       title: { en: "“Where Do Good Research Ideas Come From?”", ko: "“좋은 연구 아이디어는 어디에서 오는가?”" },
-      venue: { en: "Student Success Alumni Talk, Sungkyunkwan University", ko: "학생성공 동문 토크, 성균관대학교" },
+      venue: { en: "Sungkyunkwan University", ko: "성균관대학교" },
       date: { en: "May 2026", ko: "2026.05" },
     },
     {
       title: { en: "“Why Do We Pursue Graduate Studies?”", ko: "“우리는 왜 대학원에 가는가?”" },
-      venue: { en: "The 6th HAYAKU Conference, Yonsei University", ko: "제6회 HAYAKU 콘퍼런스, 연세대학교" },
+      venue: { en: "Yonsei University", ko: "연세대학교" },
       date: { en: "Mar 2026", ko: "2026.03" },
     },
     {
       title: { en: "“Multimodal Video Summarization Research”", ko: "“멀티모달 비디오 요약 연구”" },
-      venue: { en: "The 5th HAYAKU Conference, Korea University", ko: "제5회 HAYAKU 콘퍼런스, 고려대학교" },
+      venue: { en: "Korea University", ko: "고려대학교" },
       date: { en: "Sep 2025", ko: "2025.09" },
     },
     {
       title: { en: "“Reflections on Video Research”", ko: "“비디오 연구를 돌아보며”" },
-      venue: { en: "Student Success Alumni Talk, Sungkyunkwan University", ko: "학생성공 동문 토크, 성균관대학교" },
+      venue: { en: "Sungkyunkwan University", ko: "성균관대학교" },
       date: { en: "May 2025", ko: "2025.05" },
     },
   ],
 
   teaching: [
+    {
+      course: { en: "Core Computing: Thinking with Computers", ko: "컴퓨팅핵심: 컴퓨터로 생각하기" },
+      school: { en: "Seoul National University", ko: "서울대학교" },
+      term: { en: "Fall 2026", ko: "2026년 2학기" },
+    },
     {
       course: { en: "Machine Learning for Visual Understanding", ko: "시각적 이해를 위한 기계학습" },
       school: { en: "Seoul National University", ko: "서울대학교" },
@@ -435,6 +439,11 @@ const SITE = {
   ],
 
   service: [
+    {
+      role: { en: "Reviewer", ko: "리뷰어" },
+      detail: "International Conference on Learning Representations (ICLR)",
+      year: "2027",
+    },
     {
       role: { en: "Reviewer", ko: "리뷰어" },
       detail: "Conference on Neural Information Processing Systems (NeurIPS)",
@@ -478,8 +487,8 @@ const SITE = {
   footer: {
     copyright: "© 2026 Sumin Kim. All rights reserved.",
     sub: {
-      en: "Last updated June 10, 2026",
-      ko: "2026년 6월 10일 업데이트",
+      en: "Last updated September 28, 2026",
+      ko: "2026년 9월 28일 업데이트",
     },
   },
 };
